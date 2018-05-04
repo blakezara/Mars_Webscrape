@@ -63,7 +63,7 @@ def scrape():
     mars_weather = soup.find('p', class_="TweetTextSize TweetTextSize--normal js-tweet-text tweet-text").text
 
 
-    #Facts
+    #Facts---- cannot figure out how to do without requests sorry!
 
 
     mars_facts = requests.get("https://space-facts.com/mars/")
@@ -100,7 +100,7 @@ def scrape():
         hemisphere_image_urls.append({"title": title, "img_url": image_url})
 
                 
-        
+        #Dictionary for Mongo
 
         mars_dict = {
             "id": 1,
@@ -111,4 +111,4 @@ def scrape():
             "new_mars_data": new_mars_data,
             "hemisphere_i": hemisphere_image_urls
             }
-    return mars_dict
+    return mar_dict
